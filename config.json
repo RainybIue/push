@@ -1,0 +1,23 @@
+{
+    "app_id":"wxbc5166688a5de7bd",
+    "app_secret":"50f0c9bbcd30faf2de4f708b058f55fa",
+    "template_id":"Ejb4VeIZMBL1IU0sdTCUh2gQHJXCNaDY-4CfsCCm--o",
+    "user":[
+        "octt-6eLZMF5ljn1rZ1bzkVytZf8",
+        "octt-6So4KQRRzKv8qb6gbY85ynY"
+    ],
+    "province":"广东",
+    "city":"肇庆",
+    "birthday1":"2002-10-03",
+    "birthday2":"1998-12-24",
+    "love_date":"2022-03-07",
+    "Whether_Eng":true,
+    "Whether_caihongpi":false,
+    "Whether_lizhi":true,
+    "Whether_tip":true,
+    "Whether_health":true,
+    "Whether_lucky":true,
+    "lovers_prattle": true,
+    "tianxing_API":"9684544f2536d8ce67037d1c0bb7872d",
+    "astro":"libra"
+}
