@@ -134,15 +134,15 @@ class WeChat:
         if self.config["Whether_tip"]:
             try:
                 conn = http.client.HTTPSConnection('api.tianapi.com')  # 接口域名
-                params = urllib.parse.urlencode({'key': self.config["tianxing_API"], 'city': self.config["city"]})
+                params = urllib.parse.urlencode({'key': self.config["tianxing_API"], 'city': self.config["city"], 'type':"1"})
                 headers = {'Content-type': 'application/x-www-form-urlencoded'}
                 conn.request('POST', '/tianqi/index', params, headers)
                 res = conn.getresponse()
                 data = res.read()
                 data = json.loads(data)
-                pop = data["newslist"][0]["pop"]
+                # pop = data["newslist"][0]["pop"]
                 tips = data["newslist"][0]["tips"]
-                return pop, tips
+                return tips
             except:
                 return "天气预报API调取错误，请检查API是否正确申请或是否填写正确", ""
 
@@ -229,7 +229,7 @@ class WeChat:
         pipi = self.caihongpi()
         lizhi = self.lizhi()
         # 下雨概率和建议
-        pop, tips = self.tip()
+        tips = self.tip()
         health_tip = self.health()
         lucky_ = self.lucky()
         weather, max_temperature, min_temperature = get_weather(self.config["province"], self.config["city"])
@@ -313,11 +313,6 @@ class WeChat:
 
                     "lizhi": {
                         "value": lizhi,
-                        "color": get_color()
-                    },
-
-                    "pop": {
-                        "value": pop,
                         "color": get_color()
                     },
 
